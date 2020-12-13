@@ -1,0 +1,312 @@
+@import url(../css/fonts.css);
+
+html,
+body {
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+:root {
+  /* color theme variables */
+
+  --text-gray: #3f4954;
+  --text-light: #686666da;
+  --bg-color: #0f0f0f;
+  --white: #fff;
+  --midnight: #125871;
+
+  /* gradients */
+
+  --morpheus: linear-gradient(120deg, #30cfd0 0%, #330867 100%);
+
+  /* font variables */
+  --josefin: "josefin", cursive;
+  --libre: "libre", cursive;
+  --oswald: "oswald", cursive;
+  --raleway: "raleway" cursive;
+  --yanone: "yanone" cursive;
+}
+
+/* -------- global classes ------- */
+
+a {
+  text-decoration: none;
+  color: var(--midnight);
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+ul {
+  list-style: none;
+}
+
+h1 {
+  font-family: var(--raleway);
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-family: var(--josefin);
+}
+
+h3 {
+  font-family: var(--libre);
+}
+
+button.btn {
+  border: none;
+  border-radius: 2rem;
+  padding: 1rem 3rem;
+  font-family: var(--yanone);
+  cursor: pointer;
+}
+
+span {
+  font-family: var(--libre);
+}
+
+.container {
+  margin: 0 5vw;
+}
+
+/* ----x---- global classes ---x---- */
+
+/* -------------- header ---------- */
+
+.nav {
+  padding: 0 2rem;
+  height: 0rem;
+  min-height: 10vh;
+  overflow: hidden;
+  transition: height 1s ease-in-out;
+}
+
+.nav .nav-menu {
+  justify-content: space-between;
+}
+
+.nav .toggle-collapse {
+  position: absolute;
+  top: 0;
+  width: 90%;
+  cursor: pointer;
+  display: none;
+}
+
+.nav .toggle-collapse .toggle-icons {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1.7rem 0;
+}
+
+.nav .toggle-collapse .toggle-icons i {
+  font-size: 1.4rem;
+  color: var(--text-gray);
+}
+
+.collapse {
+  height: 30rem;
+}
+
+.nav .nav-items {
+  display: flex;
+  margin: 0;
+}
+
+.nav .nav-items .nav-link {
+  padding: 1.6rem 1rem;
+  font-size: 1.4rem;
+  position: relative;
+}
+
+.nav .nav-items .nav-link:hover {
+  background-color: var(--midnight);
+}
+
+.nav .nav-items .nav-link:hover a {
+  color: antiquewhite;
+}
+
+.nav .nav-brand a {
+  font-size: 1.8rem;
+  padding: 1.6rem 0;
+  display: block;
+  font-family: var(--josefin);
+}
+
+.nav .social {
+  padding: 1.6rem 0;
+}
+
+.nav .social i {
+  padding: 0 0.2rem;
+}
+
+.nav .social i:hover {
+  color: red;
+}
+
+/* -------x------- header ------x---- */
+
+/* --------------------- Main Content ----------------- */
+
+/* ---------- Site Title ---------- */
+
+main .site-title {
+  background: url(../assets/sebastian-unrau-sp-p7uuT0tw-unsplash.jpg);
+  background-size: cover;
+  height: 110vh;
+  display: flex;
+  justify-content: center;
+}
+
+main .site-title .site-background {
+  padding-top: 10rem;
+  text-align: center;
+  color: whitesmoke;
+}
+
+main .site-title h1,
+h3 {
+  margin: 0.3rem;
+}
+
+main .site-title .btn {
+  font-size: 1.2rem;
+  margin: 1.8rem;
+  background-color: blanchedalmond;
+}
+
+main .site-title .btn:hover {
+  background: transparent;
+  border: 1px solid white;
+  color: yellow;
+}
+
+/* -----x----- Site Title ------x---- */
+
+/* ------------- Blog Carousel ------------ */
+
+main .blog {
+  background: url(../assets/Abract01.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  height: 100vh;
+  width: 100%;
+  background-size: 65%;
+}
+
+main .blog .blog-post {
+  padding-top: 6rem;
+}
+
+main .blog-post .blog-content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 80%;
+  margin: 3rem 2rem;
+  box-shadow: 0px 15px 25px gray;
+}
+
+main .blog-content .blog-title {
+  padding: 2rem 0;
+}
+
+main .blog-content .btn-blog {
+  padding: 0.7rem 2rem;
+  background: var(--morpheus);
+  margin: 0.5rem;
+  color: white;
+}
+
+main .blog-content span {
+  display: block;
+}
+
+section .container .owl-nav {
+  position: absolute;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.owl-nav .owl-prev .owl-nav-prev,
+.owl-nav .owl-next .owl-nav-next {
+  color: #3f4954;
+  background: transparent;
+  font-size: 2rem;
+}
+
+.owl-theme .owl-nav [class*="owl-"]:hover {
+  background: transparent;
+  color: #3f4954;
+}
+
+.owl-theme .owl-nav [class*="owl-"] {
+  outline: none;
+}
+/* -------x------ Blog Carousel ------x------ */
+
+/* --------------- Side content --------------- */
+
+main .site-content {
+  display: grid;
+  grid-template-columns: 70% 30%;
+}
+
+main .post-content {
+  width: 100%;
+}
+
+main .post-content .post-image .img {
+  width: 100%;
+}
+
+main .site-content .post-content > .post-image .img {
+  width: 100%;
+  transition: all 1s ease;
+}
+
+main .site-content .post-content > .post-image .img:hover {
+  transform: scale(1.1);
+}
+
+main .site-content .post-content > .post-image .post-info span {
+  margin: 0 0.5rem;
+}
+
+main .site-content .post-content > .post-image,
+.post-title {
+  padding: 1rem 2rem;
+  position: relative;
+}
+
+main .site-content .post-content > .post-image .post-info {
+  background: var(--sky);
+  padding: 1rem;
+  position: absolute;
+  bottom: 0%;
+  left: 20vw;
+  border-radius: 3rem;
+}
+
+/* --------x------- Side content -------x-------- */
+
+/* ----------x----------- Main Content ----------x------- */
+
+/*       Viewport <= 750px       */
+
+@media only screen and (max-width: 750px) {
+  .nav .nav-menu,
+  .nav .nav-items {
+    flex-direction: column;
+  }
+  .nav .toggle-collapse {
+    display: initial;
+  }
+}
